@@ -1,0 +1,290 @@
+/* Import Google Fonts for the page */
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Baloo+Bhaina');
+
+/* Set box-sizing for all elements and remove default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set styles for the title element */
+#title {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 40px;
+  position: fixed;
+  font-weight: bold;
+  top: 20px;
+}
+
+/* Set background gradient and size for the body element */
+body {
+  background-image: linear-gradient(#70c4ee, #0174ad);
+  background-size: 100% 200%;
+}
+
+/* Set styles for the game board */
+#board {
+  position: relative;
+  width: 100%;
+  min-width: 550px;
+  margin-top: 25px;
+}
+
+/* Set styles for the banner at the top of the game board */
+#banner {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  background-color: #152c59;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 25px;
+}
+
+/* Set styles for the table element */
+table {
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin: 0 auto;
+}
+
+/* Set styles for the table cells */
+td {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #152c59;
+  border-radius: 0px;
+}
+
+/* Set styles for table cells on hover */
+td:hover {
+  background: #538daa;
+}
+
+/* Set styles for the cell content */
+td div {
+  width: 70px;
+  height: 70px;
+}
+
+/* Set styles for spacing of the board */
+.numbers,
+.letters {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+
+/* Set styles for sunk ships */
+.sunk {
+  background-color: #8b0000;
+  text-align: center;
+  font-size: 50px;
+  vertical-align: bottom;
+}
+
+/* Set styles for hit ships */
+.hit {
+  background-color: #f56c6c;
+  text-align: center;
+  font-size: 50px;
+  vertical-align: bottom;
+  animation: shake 0.1s ease-in-out infinite alternate;
+}
+
+/* Set styles for the redo button */
+.redo {
+  animation-name: pulse, changeColor;
+  animation-duration: 1s, 3s;
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: ease-in-out, ease-in-out;
+}
+
+/* Set keyframe animations for changing color */
+@keyframes changeColor {
+  0% {
+    background-color: #0174ad; /* starting color */
+  }
+  50% {
+    background-color: #ff0000; /* mid-color */
+  }
+  100% {
+    background-color: #0174ad; /* ending color */
+  }
+}
+
+/* Set keyframe animations for pulsing */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+/* Set keyframe animations for shake */
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+/* Set styles for missed ships */
+.miss {
+  background-color: #1e5fe2;
+  text-align: center;
+  font-size: 70px;
+  vertical-align: bottom;
+}
+/* Set styles for scoreboard */
+#scoreboard {
+  background-color: #152c59;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  position: fixed;
+  margin-top: 30px;
+  left: 28%;
+  height: 90px;
+  width: 20%;
+  text-align: center;
+  border-color: white;
+}
+/* Set styles for game controls */
+#gameControls {
+  background-color: #152c59;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  position: fixed;
+  margin-top: 30px;
+  left: 55%;
+  height: 90px;
+  width: 20%;
+  text-align: center;
+  border-color: white;
+}
+/* Set styles for text */
+#score,
+#shipsSunk,
+#shipsLeft,
+#shipSize {
+  font-weight: bold;
+}
+/* Set styles for restart button */
+#restartButton {
+  background-color: #0174ad;
+  border: 0px;
+  border-radius: 19px;
+  color: white;
+  width: 120px;
+  height: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+}
+/* Set styles for instructions button */
+#instructReturn {
+  background-color: #0174ad;
+  border: 0px;
+  border-radius: 19px;
+  color: white;
+  width: 200px;
+  height: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+}
+
+#restartButton:hover {
+  transform: scale(1.1);
+}
+/* Set styles for the block at end of game */
+#block {
+  background-color: #2d34421a;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  visibility: hidden;
+}
+
+body {
+  background-color: #70c4ee;
+  background-image: linear-gradient(#0991d6, #8fcfef);
+  background-size: 100% 200%;
+}
+/* Set styles for title on home page*/
+#titleMain {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 40px;
+  position: fixed;
+  font-weight: bold;
+  top: 20px;
+}
+/* Set styles for instructions*/
+#instructions {
+  margin-top: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#game,
+#starting {
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.instruct {
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#begin {
+  margin-top: 50px;
+}
+/* Set styles for begin buttons*/
+#beginButton {
+  background-color: #0174ad;
+  border: none;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#beginButton:hover {
+  transform: scale(1.1);
+}

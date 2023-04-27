@@ -1,0 +1,130 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<title>Battleship</title>
+</head>
+<body>
+	<div id="title">B A T T L E S H I P</div>
+	<div id="board">
+		<table>
+			<tr>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+				<th class="numbers"></th>
+			</tr>
+
+			<tr>
+				<th class="letters"></th>
+				<td><div id="00"></div></td>
+				<td><div id="01"></div></td>
+				<td><div id="02"></div></td>
+				<td><div id="03"></div></td>
+				<td><div id="04"></div></td>
+				<td><div id="05"></div></td>
+				<td><div id="06"></div></td>
+				<td><div id="07"></div></td>
+				<td><div id="08"></div></td>
+			</tr>
+				<tr>
+				<th class="letters"></th>
+				<td><div id="10"></div></td>
+				<td><div id="11"></div></td>
+				<td><div id="12"></div></td>
+				<td><div id="13"></div></td>
+				<td><div id="14"></div></td>
+				<td><div id="15"></div></td>
+				<td><div id="16"></div></td>
+				<td><div id="17"></div></td>
+				<td><div id="18"></div></td>
+			<tr>
+				<th class="letters"></th>
+				<td><div id="20"></div></td>
+				<td><div id="21"></div></td>
+				<td><div id="22"></div></td>
+				<td><div id="23"></div></td>
+				<td><div id="24"></div></td>
+				<td><div id="25"></div></td>
+				<td><div id="26"></div></td>
+				<td><div id="27"></div></td>
+				<td><div id="28"></div></td>
+			</tr>
+				</tr>
+				<tr>
+				<th class="letters"></th>
+				<td><div id="30"></div></td>
+				<td><div id="31"></div></td>
+				<td><div id="32"></div></td>
+				<td><div id="33"></div></td>
+				<td><div id="34"></div></td>
+				<td><div id="35"></div></td>
+				<td><div id="36"></div></td>
+				<td><div id="37"></div></td>
+				<td><div id="38"></div></td>
+			</tr>
+			<tr>
+				<th class="letters"></td>
+				<td><div id="40"></div></td>
+				<td><div id="41"></div></td>
+				<td><div id="42"></div></td>
+				<td><div id="43"></div></td>
+				<td><div id="44"></div></td>
+				<td><div id="45"></div></td>
+				<td><div id="46"></div></td>
+				<td><div id="47"></div></td>
+				<td><div id="48"></div></td>
+			</tr>
+			<tr>
+				<th class="letters"></td>
+				<td><div id="50"></div></td>
+				<td><div id="51"></div></td>
+				<td><div id="52"></div></td>
+				<td><div id="53"></div></td>
+				<td><div id="54"></div></td>
+				<td><div id="55"></div></td>
+				<td><div id="56"></div></td>
+				<td><div id="57"></div></td>
+				<td><div id="58"></div></td>
+			</tr>
+			<tr>
+				<th class="letters"></td>
+				<td><div id="60"></div></td>
+				<td><div id="61"></div></td>
+				<td><div id="62"></div></td>
+				<td><div id="63"></div></td>
+				<td><div id="64"></div></td>
+				<td><div id="65"></div></td>
+				<td><div id="66"></div></td>
+				<td><div id="67"></div></td>
+				<td><div id="68"></div></td>
+			</tr>
+
+		</table>
+	</div>
+  <div id="banner"></div>
+	<div id="scoreboard">
+		<p>Score: <span id="score">0</span></p>
+		<p>Ships Sunk: <span id="shipsSunk">0</span></p>
+		<p>Ships Left: <span id="shipsLeft">0</span></p>
+	</div>
+	<div id="gameControls">
+		<p>Ship Size: <span id="shipSize">0</span></p>
+		<button id="restartButton" onclick="restart()">Restart Game</button>
+		<a href="home.html"><button id="instructReturn" onclick="restart()">Instructions/Gamemode</button>
+	</div>
+	<div id="block">
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

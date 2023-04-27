@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding and viewport for the page -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title of the page and link to the CSS stylesheet -->
+    <title>Battleship Instructions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Display the main title of the page -->
+    <h1 id="titleMain">Battleship Instructions</h1>
+    <div id="instructions">
+      <!-- Display the game instructions -->
+      <p class="instruct">
+        Welcome to Battleship! The goal of the game is to sink all of the ships
+        by guessing the location on a grid.
+      </p>
+      <!-- Display the gameplay instructions -->
+      <h2 id="game">Gameplay</h2>
+      <p class="instruct">
+        The computer will start with a fleet of three ships placed on a 9x7
+        grid. You will then place bombs by clicking on cells.
+      </p>
+      <p class="instruct">
+        If a ship is located at the guessed coordinate, it is considered a
+        "hit". This will be represented by pink bomb icon. If the guess is a
+        miss, this will br represented by a blue X. Once a ship sinks, the icons
+        will change to a dark red ship symbol.
+      </p>
+      <p class="instruct">
+        The number of tries it takes you to sink the ships is recorded. Try and
+        keep it as low as possible!
+      </p>
+      <!-- Display the "Getting Started" instructions -->
+      <h2 id="starting">Getting Started</h2>
+      <p class="instruct">
+        Click one of the "Begin" buttons below to select ship size and start
+        playing Battleship.
+      </p>
+      <!-- Display the "Begin" buttons with links to the game.html file with size parameter in the URL -->
+      <div id="begin">
+        <a href="game.html?size=2"
+          ><button id="beginButton">Begin Small Ships</button></a
+        >
+      </div>
+      <div id="begin">
+        <a href="game.html?size=3"
+          ><button id="beginButton">Begin Medium Ships</button></a
+        >
+      </div>
+      <div id="begin">
+        <a href="game.html?size=4"
+          ><button id="beginButton">Begin Large Ships</button></a
+        >
+      </div>
+    </div>
+  </body>
+</html>

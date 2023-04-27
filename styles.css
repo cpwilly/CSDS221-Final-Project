@@ -212,7 +212,7 @@ td div {
   font-weight: bold;
 }
 
-#restartButton:hover {
+#restartButton:hover, #instructReturn:hover {
   transform: scale(1.1);
 }
 /* Set styles for the block at end of game */
